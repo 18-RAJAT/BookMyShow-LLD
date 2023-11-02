@@ -199,3 +199,265 @@ public:
     vector<Guest>guests;
     vector<TicketCounter>ticketCounters;
 };
+
+int main()
+{
+    BookMyShow bms;
+    cout<<"\t\t Welcome to Book My Show\n\n";
+    cout<<"Enter the details of the movie\n\n\n";
+    Movie movie;
+    cout<<"Enter the movie name: ";
+    cin>>movie.movieName;
+    cout<<"Enter the movie id: ";
+    cin>>movie.movieId;
+    cout<<"Enter the duration of the movie in minutes: ";
+    cin>>movie.durationInMinutes;
+    cout<<"Enter the language of the movie: ";
+    cin>>movie.language;
+    cout<<"Enter the release date of the movie: ";
+    cin>>movie.releaseDate;
+    cout<<"Enter the city in which the movie is being played: ";
+    string city;
+    cin>>city;
+    cout<<"Enter the cinema hall name: ";
+    string cinemaHallName;
+    cin>>cinemaHallName;
+    cout<<"Enter the cinema hall id: ";
+    int cinemaHallId;
+    cin>>cinemaHallId;
+    cout<<"Enter the address of the cinema hall\n\n\n";
+    Address address;
+    cout<<"Enter the pin code: ";
+    cin>>address.pinCode;
+    cout<<"Enter the street: ";
+    cin>>address.street;
+    cout<<"Enter the city: ";
+    cin>>address.city;
+    cout<<"Enter the state: ";
+    cin>>address.state;
+    cout<<"Enter the country: ";
+    cin>>address.country;
+    CinemaHall cinemaHall;
+    cinemaHall.cinemaHallId=cinemaHallId;
+    cinemaHall.cinemaHallName=cinemaHallName;
+    cinemaHall.address=address;
+    Audi audi;
+    cout<<"Enter the audi id: ";
+    cin>>audi.audiId;
+    cout<<"Enter the audi name: ";
+    cin>>audi.audiName;
+    cout<<"Enter the total number of seats in the audi: ";
+    cin>>audi.totalSeats;
+    cinemaHall.audiList.push_back(audi);
+    Show show;
+    cout<<"Enter the show id: ";
+    cin>>show.showId;
+    show.movie=&movie;
+    cout<<"Enter the start time of the show: ";
+    cin>>show.startTime;
+    cout<<"Enter the end time of the show: ";
+    cin>>show.endTime;
+    show.cinemaPlayedAt=&cinemaHall;
+    Seat seat;
+    cout<<"Enter the seat id: ";
+    cin>>seat.seatId;
+
+    cout<<"\t\t Press 1 for DELUXE \t\t Press 2 for VIP \t\t Press 3 for ECONOMY \t\t Press 4 for OTHER\n\n";
+
+    cout<<"Enter the seat type: ";
+    int seatType;
+    cin>>seatType;
+    if(seatType==1)
+    {
+        seat.seatType=SeatType::DELUXE;
+    }
+    else if(seatType==2)
+    {
+        seat.seatType=SeatType::VIP;
+    }
+    else if(seatType==3)
+    {
+        seat.seatType=SeatType::ECONOMY;
+    }
+    else
+    {
+        seat.seatType=SeatType::OTHER;
+    }
+    
+    cout<<"\t\t Press 1 for BOOKED \t\t Press 2 for AVAILABLE \t\t Press 3 for RESERVED \t\t Press 4 for NOT_AVAILABLE\n\n";
+
+    cout<<"Enter the seat status: ";
+    int seatStatus;
+    cin>>seatStatus;
+    if(seatStatus==1)
+    {
+        seat.seatStatus=SeatStatus::BOOKED;
+    }
+    else if(seatStatus==2)
+    {
+        seat.seatStatus=SeatStatus::AVAILABLE;
+    }
+    else if(seatStatus==3)
+    {
+        seat.seatStatus=SeatStatus::RESERVED;
+    }
+    else
+    {
+        seat.seatStatus=SeatStatus::NOT_AVAILABLE;
+    }
+    cout<<"Enter the price of the seat: ";
+    cin>>seat.price;
+    show.seats.push_back(seat);
+    cinemaHall.cinemaHallName=cinemaHallName;
+    cinemaHall.cinemaHallId=cinemaHallId;
+    cinemaHall.address=address;
+    cinemaHall.audiList.push_back(audi);
+    cinemaHall.cinemaHallName=cinemaHallName;
+    cinemaHall.cinemaHallId=cinemaHallId;
+    cinemaHall.address=address;
+    cinemaHall.audiList.push_back(audi);
+    cinemaHall.cinemaHallName=cinemaHallName;
+    cinemaHall.cinemaHallId=cinemaHallId;
+    cinemaHall.address=address;
+    cinemaHall.audiList.push_back(audi);
+    cinemaHall.cinemaHallName=cinemaHallName;
+    cinemaHall.cinemaHallId=cinemaHallId;
+    cinemaHall.address=address;
+    cinemaHall.audiList.push_back(audi);
+    cinemaHall.cinemaHallName=cinemaHallName;
+    cinemaHall.cinemaHallId=cinemaHallId;
+    cinemaHall.address=address;
+    cinemaHall.audiList.push_back(audi);
+    cinemaHall.cinemaHallName=cinemaHallName;
+    cinemaHall.cinemaHallId=cinemaHallId;
+    cinemaHall.address=address;
+    cinemaHall.audiList.push_back(audi);
+    cinemaHall.cinemaHallName=cinemaHallName;
+    cinemaHall.cinemaHallId=cinemaHallId;
+    cinemaHall.address=address;
+    cinemaHall.audiList.push_back(audi);
+    cinemaHall.cinemaHallName=cinemaHallName;
+    cinemaHall.cinemaHallId=cinemaHallId;
+    cinemaHall.address=address;
+    cinemaHall.audiList.push_back(audi);
+    bms.cinemaHalls.push_back(cinemaHall);
+    cout<<"Enter the user id: ";
+    int userId;
+    cin>>userId;
+    cout<<"Enter the user name: ";
+    string userName;
+    cin>>userName;
+    cout<<"Enter the password: ";
+    string password;
+    cin>>password;
+    cout<<"Enter the name of the user: ";
+    string name;
+    cin>>name;
+    cout<<"Enter the mail id of the user: ";
+    string mail;
+    cin>>mail;
+    cout<<"Enter the address of the user\n\n\n";
+    Address address1;
+    cout<<"Enter the pin code: ";
+    cin>>address1.pinCode;
+    cout<<"Enter the street: ";
+    cin>>address1.street;
+    cout<<"Enter the city: ";
+    cin>>address1.city;
+    cout<<"Enter the state: ";
+    cin>>address1.state;
+    cout<<"Enter the country: ";
+    cin>>address1.country;
+    Member member;
+    member.userId=userId;
+    member.account.userName=userName;
+    member.account.password=password;
+    member.name=name;
+    member.mail=mail;
+    member.address=address1;
+    bms.members.push_back(member);
+    cout<<"Enter the user id: ";
+    cin>>userId;
+    cout<<"Enter the user name: ";
+    cin>>userName;
+    cout<<"Enter the password: ";
+    cin>>password;
+    cout<<"Enter the name of the user: ";
+    cin>>name;
+    cout<<"Enter the mail id of the user: ";
+    cin>>mail;
+    cout<<"Enter the address of the user\n\n\n";
+    Address address2;
+    cout<<"Enter the pin code: ";
+    cin>>address2.pinCode;
+    cout<<"Enter the street: ";
+    cin>>address2.street;
+    cout<<"Enter the city: ";
+    cin>>address2.city;
+    cout<<"Enter the state: ";
+    cin>>address2.state;
+    cout<<"Enter the country: ";
+    cin>>address2.country;
+    Admin admin;
+    admin.userId=userId;
+    admin.account.userName=userName;
+    admin.account.password=password;
+    admin.name=name;
+    admin.mail=mail;
+    admin.address=address2;
+    bms.admins.push_back(admin);
+    cout<<"Enter the user id: ";
+    cin>>userId;
+    cout<<"Enter the user name: ";
+    cin>>userName;
+    cout<<"Enter the password: ";
+    cin>>password;
+    cout<<"Enter the name of the user: ";
+    cin>>name;
+    cout<<"Enter the mail id of the user: ";
+    cin>>mail;
+    cout<<"Enter the address of the user\n\n\n";
+    Address address3;
+    cout<<"Enter the pin code: ";
+    cin>>address3.pinCode;
+    cout<<"Enter the street: ";
+    cin>>address3.street;
+    cout<<"Enter the city: ";
+    cin>>address3.city;
+    cout<<"Enter the state: ";
+    cin>>address3.state;
+    cout<<"Enter the country: ";
+    cin>>address3.country;
+    
+    cout<<"\n\n\n";
+    cout<<"\t\t Details of the movie\n\n";
+    cout<<"Movie name: "<<movie.movieName<<endl;
+    cout<<"Movie id: "<<movie.movieId<<endl;
+    cout<<"Duration of the movie in minutes: "<<movie.durationInMinutes<<endl;
+    cout<<"Language of the movie: "<<movie.language<<endl;
+    cout<<"Release date of the movie: "<<movie.releaseDate<<endl;
+    cout<<"City in which the movie is being played: "<<city<<endl;
+    cout<<"Cinema hall name: "<<cinemaHallName<<endl;
+    cout<<"Cinema hall id: "<<cinemaHallId<<endl;
+    cout<<"Address of the cinema hall\n";
+    cout<<"Pin code: "<<address.pinCode<<endl;
+    cout<<"Street: "<<address.street<<endl;
+    cout<<"City: "<<address.city<<endl;
+    cout<<"State: "<<address.state<<endl;
+    cout<<"Country: "<<address.country<<endl;
+    cout<<"Audi id: "<<audi.audiId<<endl;
+    cout<<"Audi name: "<<audi.audiName<<endl;
+    cout<<"Total number of seats in the audi: "<<audi.totalSeats<<endl;
+    cout<<"Show id: "<<show.showId<<endl;
+    cout<<"Start time of the show: "<<show.startTime<<endl;
+    cout<<"End time of the show: "<<show.endTime<<endl;
+    cout<<"Seat id: "<<seat.seatId<<endl;
+    cout<<"Seat type: "<<seatType<<endl;
+    cout<<"Seat status: "<<seatStatus<<endl;
+    cout<<"Price of the seat: "<<seat.price<<endl;
+    cout<<"User id: "<<userId<<endl;
+    cout<<"User name: "<<userName<<endl;
+    cout<<"Password: "<<password<<endl;
+
+    return 0;
+}
